@@ -1,0 +1,166 @@
+.time-list-container {
+    display: flex;
+    position: relative;
+    width: 100px;
+    .time-highlight {
+        background-color: #fff;
+        border-color: rgba(0,0,0,0.08);
+        
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        width: 100%;
+        height: calc(8px + 1.4285714286em);
+        z-index: 1;
+        border-width: 1px 0;
+        border-style: solid;
+        border-radius: .1px;
+    }
+    .time-list-wrapper {
+        &::before {
+            display: block;
+            content: " ";
+            position: absolute;
+            width: 100%;
+            left: 0;
+            pointer-events: none;
+            height: calc(50% - 1em);
+            box-sizing: border-box;
+            border-style: solid;
+            background-color: rgba(0,0,0,0.04);
+            border-width: 0;
+        } 
+        &::after {
+            display: block;
+            content: " ";
+            position: absolute;
+            width: 100%;
+            left: 0;
+            pointer-events: none;
+            height: calc(50% - 1em);
+            box-sizing: border-box;
+            border-style: solid;
+            background-color: rgba(0,0,0,0.04);
+            border-width: 0;
+        } 
+        
+        background-color: #f9f9f9;
+        display: inline-block;
+        overflow: hidden;
+        box-sizing: content-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        position: relative;
+        padding: 20px 0;
+        text-align: center;
+        width: 5em;
+        height: 200px;
+        .title {
+            display: block;
+            text-align: center;
+            font-size: 10px;
+            position: absolute;
+            text-transform: capitalize;
+            font-weight: bold;
+            min-width: 100%;
+            height: 1.5em;
+            line-height: 1.5em;
+            margin-top: -20px;
+            background: transparent;
+            z-index: 12;
+            background: #f9f9f9;
+            opacity: .6;
+        }
+        .time-list {
+            position: absolute;
+            display: -ms-flexbox;
+            display: flex;
+            z-index: 10;
+            outline: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            top: 0;
+            .time-container {
+                background: transparent;
+                position: absolute;
+                display: block;
+                overflow-x: hidden;
+                overflow-y: scroll;
+                line-height: 1.4285714286;
+                left: 0;
+                right: 0;
+                top: 20px;
+                bottom: 20px;
+                padding-right: 100px;
+                padding-left: 100px;
+                margin-left: -100px;
+                margin-right: -100px;
+                margin-right: -117px;
+                ul {
+                    &::after {
+                        display: block;
+                        content: " ";
+                        position: absolute;
+                        width: 100%;
+                        left: 0;
+                        pointer-events: none;
+                        height: 84px;
+                        box-sizing: border-box;
+                    }
+                    transform: translateY(85px);
+                    height: auto;
+                    width: 5em;
+                    margin: 0;
+                    padding: 0;
+                    border-width: 0;
+                    outline: 0;
+                    font: inherit;
+                    text-decoration: none;
+                    list-style: none;
+                   li {
+                       padding: 4px 8px;
+                       min-height: calc(1.43em + 2px);
+                       line-height: calc(1.43em + 2px);
+                       outline: none;
+                       cursor: pointer;
+                       display: list-item;
+                       
+                       span {
+                           
+                       }
+                   } 
+                    .item:hover {
+                       color: #ff6358;
+                    }
+                    .item:focus {
+                        background-color: #fff;
+                        border-color: rgba(0,0,0,0.08);
+                    }
+                }
+            }
+            .scrollable {
+                
+            }
+            .content {
+                
+            }
+            
+        }
+    }
+    .time-separator {
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -ms-flex-item-align: center;
+        align-self: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        height: 100%;
+        z-index: 11;
+    }
+    
+}
